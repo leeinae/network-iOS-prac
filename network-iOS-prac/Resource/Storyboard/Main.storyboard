@@ -57,6 +57,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="Puv-Mw-egk" secondAttribute="bottom" constant="10" id="vel-tW-DC2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="idLabel" destination="gz1-o3-11f" id="gKA-GF-Y48"/>
+                                            <outlet property="nicknameLabel" destination="Rs8-GG-U5P" id="xVc-Yb-81x"/>
+                                            <outlet property="thumbnail" destination="Puv-Mw-egk" id="DEA-5n-r9E"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
