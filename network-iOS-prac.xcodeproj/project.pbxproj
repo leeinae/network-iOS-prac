@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60C90A2ADEB35F8BF78EF21F /* Pods_network_iOS_prac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C05D80D9E8403E037E7A28 /* Pods_network_iOS_prac.framework */; };
 		AB290117256F7F8600C8F285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB290116256F7F8600C8F285 /* AppDelegate.swift */; };
 		AB290119256F7F8600C8F285 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB290118256F7F8600C8F285 /* SceneDelegate.swift */; };
 		AB290120256F7F8700C8F285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB29011F256F7F8700C8F285 /* Assets.xcassets */; };
@@ -14,9 +15,16 @@
 		AB290132256F7FCB00C8F285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB290131256F7FCB00C8F285 /* Main.storyboard */; };
 		AB290139256F800C00C8F285 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB290138256F800C00C8F285 /* ViewController.swift */; };
 		AB29013C256F819000C8F285 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB29013B256F819000C8F285 /* TableViewCell.swift */; };
+		AB290140256F863D00C8F285 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB29013F256F863D00C8F285 /* APIConstants.swift */; };
+		AB290148256F886700C8F285 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB290147256F886700C8F285 /* NetworkResult.swift */; };
+		AB29014B256F89D400C8F285 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB29014A256F89D400C8F285 /* APIResponse.swift */; };
+		AB29014E256F8A5F00C8F285 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB29014D256F8A5F00C8F285 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		269D88645C306D88D550E39E /* Pods-network-iOS-prac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-network-iOS-prac.debug.xcconfig"; path = "Target Support Files/Pods-network-iOS-prac/Pods-network-iOS-prac.debug.xcconfig"; sourceTree = "<group>"; };
+		26C05D80D9E8403E037E7A28 /* Pods_network_iOS_prac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_network_iOS_prac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65301A8B27BDE254492766D8 /* Pods-network-iOS-prac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-network-iOS-prac.release.xcconfig"; path = "Target Support Files/Pods-network-iOS-prac/Pods-network-iOS-prac.release.xcconfig"; sourceTree = "<group>"; };
 		AB290113256F7F8600C8F285 /* network-iOS-prac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "network-iOS-prac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB290116256F7F8600C8F285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB290118256F7F8600C8F285 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +34,10 @@
 		AB290131256F7FCB00C8F285 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AB290138256F800C00C8F285 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB29013B256F819000C8F285 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AB29013F256F863D00C8F285 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		AB290147256F886700C8F285 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		AB29014A256F89D400C8F285 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		AB29014D256F8A5F00C8F285 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C90A2ADEB35F8BF78EF21F /* Pods_network_iOS_prac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E598D1DC14A690A41856F71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				269D88645C306D88D550E39E /* Pods-network-iOS-prac.debug.xcconfig */,
+				65301A8B27BDE254492766D8 /* Pods-network-iOS-prac.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2CF9691DBE293AE809AA252 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26C05D80D9E8403E037E7A28 /* Pods_network_iOS_prac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AB29010A256F7F8600C8F285 = {
 			isa = PBXGroup;
 			children = (
 				AB290115256F7F8600C8F285 /* network-iOS-prac */,
 				AB290114256F7F8600C8F285 /* Products */,
+				4E598D1DC14A690A41856F71 /* Pods */,
+				A2CF9691DBE293AE809AA252 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +112,7 @@
 		AB29012C256F7F9500C8F285 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AB29013E256F85FA00C8F285 /* Model */,
 				AB290130256F7FB400C8F285 /* Cell */,
 				AB29012F256F7FAE00C8F285 /* VC */,
 			);
@@ -110,6 +143,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		AB29013E256F85FA00C8F285 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB29013F256F863D00C8F285 /* APIConstants.swift */,
+				AB290147256F886700C8F285 /* NetworkResult.swift */,
+				AB29014A256F89D400C8F285 /* APIResponse.swift */,
+				AB29014D256F8A5F00C8F285 /* ImageService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB290127256F7F8700C8F285 /* Build configuration list for PBXNativeTarget "network-iOS-prac" */;
 			buildPhases = (
+				01739BAFC42AAA54182AD656 /* [CP] Check Pods Manifest.lock */,
 				AB29010F256F7F8600C8F285 /* Sources */,
 				AB290110256F7F8600C8F285 /* Frameworks */,
 				AB290111256F7F8600C8F285 /* Resources */,
+				F9BF1464637E7ADEA9ECE4D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,13 +221,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01739BAFC42AAA54182AD656 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-network-iOS-prac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9BF1464637E7ADEA9ECE4D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-network-iOS-prac/Pods-network-iOS-prac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-network-iOS-prac/Pods-network-iOS-prac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-network-iOS-prac/Pods-network-iOS-prac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB29010F256F7F8600C8F285 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB29014B256F89D400C8F285 /* APIResponse.swift in Sources */,
+				AB29014E256F8A5F00C8F285 /* ImageService.swift in Sources */,
 				AB290139256F800C00C8F285 /* ViewController.swift in Sources */,
+				AB290140256F863D00C8F285 /* APIConstants.swift in Sources */,
 				AB29013C256F819000C8F285 /* TableViewCell.swift in Sources */,
+				AB290148256F886700C8F285 /* NetworkResult.swift in Sources */,
 				AB290117256F7F8600C8F285 /* AppDelegate.swift in Sources */,
 				AB290119256F7F8600C8F285 /* SceneDelegate.swift in Sources */,
 			);
@@ -319,6 +411,7 @@
 		};
 		AB290128256F7F8700C8F285 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 269D88645C306D88D550E39E /* Pods-network-iOS-prac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,6 +430,7 @@
 		};
 		AB290129256F7F8700C8F285 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65301A8B27BDE254492766D8 /* Pods-network-iOS-prac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
